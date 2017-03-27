@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>AddOn.Initial</id>
+    <version>$version$</version>
+    <title>AddOn.Initial</title>
+    <authors>marija.jemuovic</authors>
+    <owners>marija.jemuovic</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Builds a package from source code related to Forms</description>
+    <copyright>Copyright © 2017</copyright>
+    <tags>EPiServerModulePackage</tags>
+  </metadata>
+  <files>
+    <file src="bin\$configuration$\AddOn.Initial.dll" target="lib\net45\" />
+    <file src="bin\$configuration$\AddOn.Initial.zip" target="content\modules\_protected\AddOn.Initial\" />
+  </files>
+</package>

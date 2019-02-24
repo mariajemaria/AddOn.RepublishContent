@@ -7,8 +7,8 @@
     <ProjectGuid>{53CB0FA3-6011-4063-8992-A7CC86FF8DD6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>AddOn.Initial</RootNamespace>
-    <AssemblyName>AddOn.Initial</AssemblyName>
+    <RootNamespace>AddOn.RepublishContent</RootNamespace>
+    <AssemblyName>AddOn.RepublishContent</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
@@ -39,7 +39,7 @@
   <ItemGroup>
     <None Include=".nuget\NuGet.Config" />
     <None Include=".nuget\NuGet.targets" />
-    <None Include="AddOn.Initial.nuspec" />
+    <None Include="AddOn.RepublishContent.nuspec" />
     <None Include="module.config" />
     <None Include="Packager\Main.targets" />
     <None Include="web.config.install.xdt">

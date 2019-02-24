@@ -1,2 +1,2 @@
-# AddOn.Initial
-Initial code for an Episerver Add-On
+# AddOn.RepublishContent
+An Episerver Add-On that republishes content

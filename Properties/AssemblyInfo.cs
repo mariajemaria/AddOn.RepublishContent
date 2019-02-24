@@ -4,12 +4,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("AddOn.Initial")]
-[assembly: AssemblyDescription("Initial Add-on Packager")]
+[assembly: AssemblyTitle("AddOn.RepublishContent")]
+[assembly: AssemblyDescription("Add-on Republish Content")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("marija.jemuovic")]
-[assembly: AssemblyProduct("AddOn.Initial")]
-[assembly: AssemblyCopyright("Copyright © 2018")]
+[assembly: AssemblyCompany("epidevserbia")]
+[assembly: AssemblyProduct("AddOn.RepublishContent")]
+[assembly: AssemblyCopyright("Copyright © 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

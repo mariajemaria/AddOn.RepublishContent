@@ -1,3 +1,19 @@
-* {
-    background: blue;
+body {
+    background: #ccc;
+}
+
+.form {
+    max-width: 80%;
+    margin: 0 auto;
+
+    &__input {
+        padding: 10px;
+        border: 2px solid #D9EBEB;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
 }

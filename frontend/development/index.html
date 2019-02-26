@@ -17,16 +17,21 @@
     </head>
 
     <body>
-        <form action="" id="form">
+        <form action="" id="form" class="form">
             <input
+                class="form__input"
                 id="query"
                 type="text"
                 placeholder="Search..."
                 name="query"
             />
 
-            <div id="selected"></div>
-            <div id="list"></div>
+            <div
+                id="selected"
+                class="form__list"
+                style="margin-bottom: 20px;"
+            ></div>
+            <div id="list" class="form__list"></div>
         </form>
 
         <script

@@ -23,12 +23,18 @@
     }
 
     function updateList() {
-        var filterUnchecked = filterUnchecked(results);
-        var $inputs = filterUnchecked.map(function(item) {
+        var filtered = filterUnchecked(results);
+        var $inputs = filtered.map(function(item) {
             return renderInput(item);
         });
 
         $list.html($inputs);
+
+        var filteredChecked = filterChecked(data);
+        var $selectedList = filteredChecked.map(function(item) {
+            return renderInput(item, true);
+        });
+        $selected.html($selectedList);
     }
 
     function filterUnchecked(results) {
@@ -38,6 +44,15 @@
             );
         });
     }
+
+    function filterChecked(results) {
+        return results.filter(function(item) {
+            return (
+                typeof selected[item.id] !== "undefined" && selected[item.id]
+            );
+        });
+    }
+
     function handleItemChange() {
         var $item = $(this);
         var id = $item.val();
@@ -58,16 +73,26 @@
         });
     }
 
-    function renderInput(value) {
-        var $checkbox = $("<input />", {
-            name: "autocomplete[]",
-            type: "checkbox",
-            value: value.id
-        }).addClass("js-item");
-
-        return $("<label />")
+    function renderInput(value, checked) {
+        var $checkbox = $(
+            "<input class='js-item' value=" +
+                value.id +
+                ' name="autocomplete[]" type="checkbox" id="checkbox__' +
+                value.id +
+                '"' +
+                (checked ? " checked" : "") +
+                "/>"
+        );
+        var $label = $(
+            '<label  for="checkbox__' +
+                value.id +
+                '"><svg width="12px" height="10px" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>' +
+                value.name +
+                "</span></label>"
+        );
+        return $('<div class="form__list__item"/>')
             .append($checkbox)
-            .append(value.name);
+            .append($label);
     }
 
     var data = [

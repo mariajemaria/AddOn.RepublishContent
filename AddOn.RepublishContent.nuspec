@@ -10,6 +10,9 @@
     <description>Episerver AddOn for republishing content</description>
     <copyright>Copyright © 2019</copyright>
     <tags>EPiServerModulePackage</tags>
+    <dependencies>
+      <dependency id="EPiServer.CMS.UI.Core" version="[11.1.0, 12)" />
+    </dependencies>
   </metadata>
   <files>
     <file src="bin\$configuration$\AddOn.RepublishContent.dll" target="lib\net461\" />
@@ -19,7 +22,4 @@
     <file src="web.config.install.xdt" target="content" />
     <file src="web.config.uninstall.xdt" target="content" />
   </files>
-  <dependencies>
-    <dependency id="EPiServer.CMS.UI.Core" version="[11.1.0, 12)" />
-  </dependencies>
 </package>

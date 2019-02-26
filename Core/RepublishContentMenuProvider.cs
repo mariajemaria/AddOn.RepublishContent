@@ -17,7 +17,7 @@ namespace AddOn.RepublishContent.Core
                 MenuPaths.Global + "/cms" + "/cmsMenuItem",
                 UriSupport.ResolveUrlFromUIAsRelativeOrAbsolute("/RepublishContent/"))
                 {
-                    SortIndex = SortIndex.First + 25,
+                    SortIndex = SortIndex.First + 1000,
                     IsAvailable = (request) => PrincipalInfo.HasAdminAccess
                 }
             };

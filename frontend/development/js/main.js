@@ -26,16 +26,13 @@
     }
 
     function renderInput(value) {
-        var $checkbox = $('<input />', {
-            name: 'autocomplete[]',
-            type: 'checkbox',
-            value: value.id
-        });
-
-        return $('<label />')
+        var $checkbox = $('<input value=' + value.id + ' name="autocomplete[]" type="checkbox" id="checkbox__' + value.id + '"/>');
+        var $label = $('<label  for="checkbox__' + value.id + '"><svg width="12px" height="10px" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>' + value.name + '</span></label>');
+        return $('<div class="form__list__item"/>')
             .append($checkbox)
-            .append(value.name)
+            .append($label)
     }
+
 
     var data = [
 

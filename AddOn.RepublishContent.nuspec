@@ -14,7 +14,12 @@
   <files>
     <file src="bin\$configuration$\AddOn.RepublishContent.dll" target="lib\net461\" />
     <file src="bin\$configuration$\AddOn.RepublishContent.zip" target="content\modules\_protected\AddOn.RepublishContent\" />
-	<file src="web.config.install.xdt" target="content" />
+    <file src="Views\web.config" target="content\modules\_protected\AddOn.RepublishContent\Views\web.config" />
+    <file src="Views\RepublishContent\Index.cshtml" target="content\modules\_protected\AddOn.RepublishContent\Views\RepublishContent\Index.cshtml" />
+    <file src="web.config.install.xdt" target="content" />
     <file src="web.config.uninstall.xdt" target="content" />
   </files>
+  <dependencies>
+    <dependency id="EPiServer.CMS.UI.Core" version="[11.1.0, 12)" />
+  </dependencies>
 </package>

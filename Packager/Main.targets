@@ -89,7 +89,7 @@
     <ItemGroup>
       <_CopyItems Include="$(OutDir)\*.nupkg" />
     </ItemGroup>
-    <Copy  SourceFiles="@(_CopyItems)" DestinationFolder="D:\localnugets" />    
+    <Copy  SourceFiles="@(_CopyItems)" DestinationFolder="C:\localnugets" />    
 
   </Target>
 

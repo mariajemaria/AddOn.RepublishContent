@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <languages>
   <language name="English" id="en">
-    
+    <addon.republishcontent>
+      <heading>Republish content</heading>
+      <name>Republish content</name>
+    </addon.republishcontent>
   </language>
 </languages>

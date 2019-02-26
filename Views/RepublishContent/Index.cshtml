@@ -1,0 +1,32 @@
+﻿@using System.Web.Mvc
+@using EPiServer.Framework.Web.Resources
+@using EPiServer.Shell.Navigation
+@using EPiServer.Shell.Web.Mvc.Html
+@inherits System.Web.Mvc.WebViewPage<AddOn.RepublishContent.Controllers.RepublishModel>
+
+<html>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+        <!-- Shell -->
+        @Html.Raw(ClientResources.RenderResources("ShellCore"))
+        @Html.Raw(ClientResources.RenderResources("ShellWidgets"))
+
+        <!-- LightTheme -->
+        @Html.Raw(ClientResources.RenderResources("ShellCoreLightTheme"))
+
+        <!-- Navigation -->
+        @Html.Raw(ClientResources.RenderResources("Navigation"))
+
+        <!-- Dojo Dashboard -->
+        @Html.Raw(ClientResources.RenderResources("DojoDashboardCompatibility", new[] { ClientResourceType.Style }))
+    </head>
+    <body>
+        @Html.Raw(Html.ShellInitializationScript())
+        @Html.Raw(Html.GlobalMenu())
+        <div>
+            <h1>@Model.Heading</h1>
+            <p>123</p>
+        </div>
+    </body>
+</html>

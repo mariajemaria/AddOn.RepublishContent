@@ -81,8 +81,8 @@ body {
 .form__list__item input:checked + label span:first-child {
   background: #95c532;
   border-color: #95c532;
-  -webkit-animation: wave .4s ease;
-  animation: wave .4s ease; }
+  -webkit-animation: wave 1s ease;
+  animation: wave 1s ease; }
   .form__list__item input:checked + label span:first-child svg {
     stroke-dashoffset: 0; }
   .form__list__item input:checked + label span:first-child:before {

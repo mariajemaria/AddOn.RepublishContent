@@ -11,14 +11,13 @@
         $selected = $("#selected");
 
         $query.on("keyup", handleKeydown);
-        $list.on("change", ".js-item", handleItemChange);
+        $('#form').on("change", ".js-item", handleItemChange);
     });
 
     function handleKeydown() {
         var $input = $(this);
         var value = $input.val();
         results = search(value, data);
-
         updateList();
     }
 
@@ -64,7 +63,9 @@
             selected[id] = false;
         }
 
-        updateList(results);
+        setTimeout(function () {
+            updateList(results)
+        }, 300);
     }
 
     function search(value, data) {
@@ -73,8 +74,16 @@
         });
     }
 
-    function renderInput(value) {
-        var $checkbox = $('<input class="js-item" value=' + value.id + ' name="autocomplete[]" type="checkbox" id="checkbox__' + value.id + '"/>');
+    function renderInput(value, checked) {
+        var $checkbox = $(
+            "<input class='js-item' value=" +
+            value.id +
+            ' name="autocomplete[]" type="checkbox" id="checkbox__' +
+            value.id +
+            '"' +
+            (checked ? " checked" : "") +
+            "/>"
+        );
         var $label = $('<label  for="checkbox__' + value.id + '"><span><svg width="12px" height="10px" viewbox="0 0 12 10"> <polyline points="1.5 6 4.5 9 10.5 1"></polyline></svg></span><span>' + value.name + '</span></label>');
         return $('<div class="form__list__item"/>')
             .append($checkbox)

@@ -97,7 +97,7 @@ body {
         &:first-child {
             background: #95c532;
             border-color: #95c532;
-            animation: wave .4s ease;
+            animation: wave 1s ease;
 
             svg {
                 stroke-dashoffset: 0;
